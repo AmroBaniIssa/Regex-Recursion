@@ -2,18 +2,15 @@
 
 function division(number, dividedBy) {
   // Write you logic here.
-  if(number==0||dividedBy==0){
-    console.log(0)
-    return 0
-  }
-  else{
-     if(number>dividedBy){
-         let x=0
-         return number/ division(number,dividedBy-1);
-     }
+  if (number == 0 || dividedBy == 0) {
+    console.log(0);
+    return 0;
+  } else {
+   
+   return 1+ division((number- dividedBy),dividedBy);
   }
 }
-console.log(division(10,8))
+console.log(division(10, 2));
 
 // describe("Test division", () => {
 //   test("Return the division result", () => {
@@ -30,21 +27,16 @@ pow(2,4) = 16
 
 function pow(x, n) {
   // Write you logic here.
-   
-   
-      
-      if(n==0||x==0){
-          return 1
-        }
-        else {
-             for(i=0;i<n;i++){
-          return x* pow(x,n-1);
-        }
-            
-      
+
+  if (n == 0 || x == 0) {
+    return 1;
+  } else {
+    for (i = 0; i < n; i++) {
+      return x * pow(x, n - 1);
+    }
   }
 }
-console.log(pow(10,3))
+console.log(pow(10, 3));
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
 the next integer is determined by summing the previous two. This gives us:
@@ -57,11 +49,10 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
   // Write you logic here.
-  if(n==0| n==1){
+  if ((n == 0) | (n == 1)) {
     return n;
-  }
-  else{
-       return fibonacci(n-1)+fibonacci(n-2)
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
 }
 // console.log(fibonacci(10))
@@ -89,8 +80,6 @@ function permutations(n, k) {
   // Write you logic here.
   return arr;
 }
-
-
 
 // describe("Test pow", () => {
 //   test("It should work as Math.pow(x,n)", () => {
